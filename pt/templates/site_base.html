@@ -4,10 +4,6 @@
 {% load i18n %}
 
 
-{# remove to bring back topbar #}
-{% block topbar_base %}{% endblock %}
-
-
 {% block styles %}
     <link href="{% static "css/app.css" %}" rel="stylesheet" />
 {% endblock %}
@@ -17,6 +13,34 @@
     {% block extra_head %}{% endblock %}
 {% endblock %}
 
+{% block nav %}
+    <ul class="main-bar">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">General</a>
+            <div class="dropdown-menu">
+                <a href="#">404 Error Page</a>
+                <a href="#">500 Error Page</a>
+                <a href="#">Account Bar</a>
+                <a href="#">Messages</a>
+                <a href="#">Pagination</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="">Apps</a>
+            <div class="dropdown-menu">
+                <a href="#">Django User Accounts</a>
+                <a href="#">Pinax Announcements</a>
+                <a href="#">Pinax Blog</a>
+                <a href="#">Pinax Cohorts</a>
+                <a href="#">Pinax Documents</a>
+                <a href="#">Pinax Invitations</a>
+                <a href="#">Pinax Likes</a>
+                <a href="#">Pinax Messagas</a>
+                <a href="#">Pinax Stripe</a>
+            </div>
+        </li>
+    </ul>
+{% endblock %}
 
 {% block footer %}
     {% include "_footer.html" %}
