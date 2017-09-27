@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+{% load i18n %}
+
+
+{# remove to bring back topbar #}
+{% block topbar_base %}{% endblock %}
+
+
+{% block styles %}
+    <link href="{% static "css/app.css" %}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block extra_head_base %}
+    {% block extra_head %}{% endblock %}
+{% endblock %}
+
+
+{% block footer %}
+    {% include "_footer.html" %}
+{% endblock %}
+
+
+{% block scripts %}
+    <script src="{% static "js/site.js" %}"></script>
+{% endblock %}
+
+{% block extra_body_base %}
+    {% block extra_body %}{% endblock %}
+{% endblock %}
