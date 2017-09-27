@@ -23,6 +23,15 @@ header {
           @extend .mr-auto;
           li {
             @extend .nav-item;
+            &.dropdown {
+              @extend .dropdown;
+              .dropdown-menu {
+                @extend .dropdown-menu;
+                a {
+                  @extend .dropdown-item;
+                }
+              }
+            }
             a {
               @extend .nav-link;
             }
