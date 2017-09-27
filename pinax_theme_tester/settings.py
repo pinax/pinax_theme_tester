@@ -99,7 +99,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.messages.context_processors.messages",
                 "pinax_theme_bootstrap.context_processors.theme",
-                "pt.context_processors.template_set"
+                "pinax_theme_tester.context_processors.template_set"
             ],
         },
     },
@@ -115,10 +115,10 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = "pt.urls"
+ROOT_URLCONF = "pinax_theme_tester.urls"
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = "pt.wsgi.application"
+WSGI_APPLICATION = "pinax_theme_tester.wsgi.application"
 
 INSTALLED_APPS = [
     "django.contrib.auth",
@@ -136,7 +136,7 @@ INSTALLED_APPS = [
     "account",
 
     # project
-    "pt",
+    "pinax_theme_tester",
 ]
 
 # A sample logging configuration. The only tangible logging

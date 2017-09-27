@@ -1,7 +1,7 @@
 from django.urls import reverse
 from django.conf.urls import url
 
-from pt.views import as_view
+from pinax_theme_tester.views import as_view
 
 
 class ViewConfig(object):

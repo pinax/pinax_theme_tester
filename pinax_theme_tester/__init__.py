@@ -5,4 +5,4 @@ This project lays the foundation for all other Pinax starter projects. It
 provides the project directory layout and bootstrap-based theme.
 """
 
-default_app_config = "pt.apps.AppConfig"
+default_app_config = "pinax_theme_tester.apps.AppConfig"
