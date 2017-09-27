@@ -131,6 +131,9 @@ INSTALLED_APPS = [
     "bootstrapform",
     "pinax_theme_bootstrap",
 
+    #
+    "account",
+
     # project
     "pt",
 ]
