@@ -1,7 +1,12 @@
 from django.conf.urls import url
-from django.views.generic import TemplateView
+
+from .views import TemplateWithContextView
+
+
+def as_view(template, context):
+    return TemplateWithContextView.as_view(template_name=template, context=context)
 
 
 urlpatterns = [
-    url(r"^$", TemplateView.as_view(template_name="homepage.html"), name="home"),
+    url(r"^$", as_view("homepage.html", {"foo": "Bar"}), name="home"),
 ]
