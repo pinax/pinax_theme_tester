@@ -1,11 +1,16 @@
 from django.conf.urls import url
 
-from .configs import dua
-from .views import as_view
+from .configs import CONFIG_MAP
+from .views import as_view, set_template_set
 
 
 urlpatterns = [
-    url(r"^$", as_view("homepage.html", dua=dua), name="home"),
+    url(r"^$", as_view("homepage.html"), name="home"),
+    url(r"^__set_tmpl/$", set_template_set, name="set_template_set")
 ]
 
-urlpatterns.extend(dua.urls())
+for label in CONFIG_MAP:
+    urlpatterns.extend(
+        view.url()
+        for view in CONFIG_MAP[label].views
+    )

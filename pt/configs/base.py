@@ -4,7 +4,7 @@ from django.conf.urls import url
 from pt.views import as_view
 
 
-class Config(object):
+class ViewConfig(object):
 
     def __init__(self, name, pattern, template, pattern_kwargs, **kwargs):
         self.name = name

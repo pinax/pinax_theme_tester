@@ -1,0 +1,33 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+<section class="fragment-container">
+    <h1>Pinax Theme Bootstrap Fragments</h1>
+
+    <h2>_account_bar.html</h2>
+    <h3>With Closed Signup</h3>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="topbar-container">
+                <div class="nav-container">
+                    <div class="mr-auto"></div>
+                    {% include "_account_bar.html" %}
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h2>_account_bar.html</h2>
+    <h3>With Open Signup</h3>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="topbar-container">
+                <div class="nav-container">
+                    <div class="mr-auto"></div>
+                    {% include "_account_bar.html" with ACCOUNT_OPEN_SIGNUP=True %}
+                </div>
+            </div>
+        </nav>
+    </header>
+</section>
+{% endblock %}
