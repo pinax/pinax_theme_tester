@@ -18,7 +18,10 @@
         border-bottom: 2px solid $gray-200;
     }
     > h2 {
-        margin-top: 20px;
+        margin-top: 40px;
+        code {
+            background: none;
+        }
     }
     > h3 {
         color: $gray-600;
