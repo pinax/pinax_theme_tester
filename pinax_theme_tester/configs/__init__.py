@@ -1,11 +1,13 @@
 from . import (
     dua,
     general,
-    blog
+    blog,
+    announcements
 )
 
 CONFIG_MAP = {
     dua.label: dua,
     general.label: general,
-    blog.label: blog
+    blog.label: blog,
+    announcements.label: announcements
 }
