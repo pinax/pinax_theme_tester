@@ -1,3 +1,5 @@
+from django.conf.urls import url, include
+
 from account.forms import LoginUsernameForm, SignupForm, ChangePasswordForm, SettingsForm, PasswordResetForm
 
 from .base import ViewConfig
@@ -16,3 +18,8 @@ views = [
     ViewConfig(pattern=r"^account/settings/$", template="account/settings.html", name="account_settings", pattern_kwargs={}, form=SettingsForm()),
     ViewConfig(pattern=r"^account/delete/$", template="account/delete.html", name="account_delete", pattern_kwargs={}),
 ]
+urlpatterns = [
+    view.url()
+    for view in views
+]
+url = url("", include("pinax_theme_tester.configs.dua"))

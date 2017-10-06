@@ -1,9 +1,11 @@
 from . import (
     dua,
-    general
+    general,
+    blog
 )
 
 CONFIG_MAP = {
     dua.label: dua,
-    general.label: general
+    general.label: general,
+    blog.label: blog
 }

@@ -41,7 +41,11 @@
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">{{ current_config.title }}</a>
             <div class="dropdown-menu">
                 {% for v in current_config.views %}
-                    <a class="dropdown-item" href="{{ v.resolved_path }}">{{ v.template }}</a>
+                    {% if v.menu %}
+                        <a class="dropdown-item" href="{{ v.resolved_path }}">
+                            {{ v.template }}
+                        </a>
+                    {% endif %}
                 {% endfor %}
             </div>
         </li>

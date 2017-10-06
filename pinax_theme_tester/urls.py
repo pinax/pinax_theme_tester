@@ -10,7 +10,4 @@ urlpatterns = [
 ]
 
 for label in CONFIG_MAP:
-    urlpatterns.extend(
-        view.url()
-        for view in CONFIG_MAP[label].views
-    )
+    urlpatterns.append(CONFIG_MAP[label].url)

@@ -134,6 +134,8 @@ INSTALLED_APPS = [
 
     #
     "account",
+    "pinax.blog",
+    "pinax.images",
 
     # project
     "pinax_theme_tester",
