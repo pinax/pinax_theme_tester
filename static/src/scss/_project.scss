@@ -1,0 +1,42 @@
+/* Styles just for the this template hosting project */
+.jumbotron {
+    .container {
+        h1 {
+            font-weight: 700;
+            font-size: 4em;
+            color: #CEEA80;
+        }
+        h2 {
+            font-size: 2.5em;
+            font-weight: 200;
+            color: #A1BE56;
+        }
+    }
+    border-radius: 0;
+    background: linear-gradient(#05506F, #031E3B);
+}
+
+header {
+    nav {
+        background-color: #05506F !important;  // linear-gradient(#031E3B, #05506F 90%);
+        color: white;
+        .navbar-nav {
+            .nav-link {
+                color: white;
+            }
+            .nav-link:hover {
+                color: $gray-200;
+            }
+            .show {
+                .nav-link {
+                    color: $gray-400;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: #031E3B;
+    color: white;
+}

@@ -8,6 +8,8 @@
     <link href="{% static "css/app.css" %}" rel="stylesheet" />
 {% endblock %}
 
+{% block site_brand %}{% endblock %}
+
 {% block body_class_base %}{% if current_config %}config-{{ current_config.label }}{% endif %} {% block body_class %}{% endblock %}{% endblock %}
 
 {% block extra_head_base %}
@@ -23,15 +25,6 @@
                 {% for label, config in available_configs.items %}
                     <option value="{{ label }}" {% if current_config.label == config.label %}selected{% endif %}>{{ config.title }}</option>
                 {% endfor %}
-                {% comment %} <option value="dua">Django User Accounts</option>
-                <option value="annoucements">Pinax Announcements</option>
-                <option value="blog">Pinax Blog</option>
-                <option value="cohorts">Pinax Cohorts</option>
-                <option value="documents">Pinax Documents</option>
-                <option value="invitations">Pinax Invitations</option>
-                <option value="likes">Pinax Likes</option>
-                <option value="messages">Pinax Messagas</option>
-                <option value="stripe">Pinax Stripe</option> {% endcomment %}
             </select>
         </div>
     </form>
