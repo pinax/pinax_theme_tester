@@ -22,3 +22,12 @@ class ViewConfig(object):
 
     def resolved_path(self):
         return reverse(self.name, kwargs=self.pattern_kwargs)
+
+
+class dotdict(dict):
+    """
+    dot.notation access to dictionary attributes
+    """
+    __getattr__ = dict.get
+    __setattr__ = dict.__setitem__
+    __delattr__ = dict.__delitem__

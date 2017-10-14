@@ -141,6 +141,7 @@ INSTALLED_APPS = [
     "pinax.stripe",
     "pinax.messages",
     "pinax.invitations",
+    "pinax.documents",
 
     # project
     "pinax_theme_tester",

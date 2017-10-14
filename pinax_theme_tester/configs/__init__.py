@@ -7,7 +7,8 @@ from . import (
     stripe,
     messages,
     likes,
-    invitations
+    invitations,
+    documents
 )
 
 CONFIG_MAP = {
@@ -19,5 +20,6 @@ CONFIG_MAP = {
     stripe.label: stripe,
     messages.label: messages,
     likes.label: likes,
-    invitations.label: invitations
+    invitations.label: invitations,
+    documents.label: documents
 }

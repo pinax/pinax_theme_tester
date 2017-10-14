@@ -9,3 +9,4 @@ pinax-cohorts
 pinax-stripe
 pinax-messages
 pinax-invitations
+pinax-documents
