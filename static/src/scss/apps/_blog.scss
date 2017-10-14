@@ -1,0 +1,43 @@
+.blog-container {
+    margin-top: 20px;
+    .blog-content {
+        .post-list {
+            .post {
+                h2 {
+                    a {
+                        color: $gray-700;
+                    }
+                    a:hover {
+                        text-decoration: none;
+                        color: $gray-600;
+                    }
+                }
+                .post-meta {
+                    color: $gray-600;
+                    font-style: italic;
+                }
+                .teaser {
+                    @extend .lead;
+                }
+                .more {
+                    text-align: right;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        .post-detail {
+            h1, h2 {
+                color: $gray-700;
+            }
+            .post-meta {
+                color: $gray-600;
+                font-style: italic;
+                border-bottom: 2px solid $gray-200;
+                padding-bottom: 5px
+            }
+            .teaser {
+                @extend .lead;
+            }
+        }
+    }
+}

@@ -34,6 +34,16 @@ post_list = [
     post,
     post
 ]
+page_obj = {
+    "has_previous": True,
+    "has_next": False,
+    "previous_page_number": 1,
+    "next_page_number": 10,
+    "number": 5
+}
+paginator = {
+    "page_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
 
 label = "blog"
 title = "Pinax Blog"
@@ -48,7 +58,7 @@ class ViewConfig(BaseViewConfig):
 
 views = [
     ViewConfig(pattern=r"^feed/(?P<section>[-\w]+)/(?P<feed_type>[-\w]+)/$", template="pinax/blog/blog_list.html", name="blog_feed", pattern_kwargs={}, menu=False),
-    ViewConfig(pattern=r"^pinax-blog/list/$", template="pinax/blog/blog_list.html", name="blog", pattern_kwargs={}, current_section="all", post_list=post_list, section="all", feed_type="atom"),
+    ViewConfig(pattern=r"^pinax-blog/list/$", template="pinax/blog/blog_list.html", name="blog", pattern_kwargs={}, current_section="all", post_list=post_list, section="all", feed_type="atom", is_paginated=True, page_obj=page_obj, paginator=paginator),
     ViewConfig(pattern=r"^pinax-blog/list-empty/$", template="pinax/blog/blog_list.html", name="blog_empty", pattern_kwargs={}, current_section="all", post_list=None),
     ViewConfig(pattern=r"^pinax-blog/section/(?P<section>[-\w]+)/$", template="pinax/blog/blog_list.html", name="blog_section", pattern_kwargs={"section": "all"}, post_list=post_list, menu=False),
     ViewConfig(pattern=r"^pinax-blog/post/(?P<post_pk>\d)/$", template="pinax/blog/blog_post.html", name="blog_post_pk", pattern_kwargs={"post_pk": 1}, post=post)
