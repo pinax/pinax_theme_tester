@@ -138,6 +138,7 @@ INSTALLED_APPS = [
     "pinax.images",
     "pinax.announcements",
     "pinax.cohorts",
+    "pinax.stripe",
 
     # project
     "pinax_theme_tester",

@@ -32,6 +32,9 @@ body.theme-tester > header {
                     color: $gray-400;
                 }
             }
+            .dropdown-menu-right {
+                min-width: 29rem;
+            }
         }
     }
 }

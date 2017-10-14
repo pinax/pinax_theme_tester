@@ -6,3 +6,4 @@ django-user-accounts
 pinax-blog
 pinax-announcements
 pinax-cohorts
+pinax-stripe
