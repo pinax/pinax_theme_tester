@@ -1,0 +1,76 @@
+{% extends "site_base.html" %}
+
+{% block messages %}{% endblock %}
+
+{% block body %}
+<section class="fragment-container">
+    <h1>Pinax Likes Fragments</h1>
+
+    <h2><code>_like.html</code></h2>
+    <h3>With an instance with a get_absolute_url</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_like.html" %}
+    </div>
+
+    <h2><code>_like.html</code></h2>
+    <h3>Without an get_absolute_url</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_like.html" with instance=liked_object %}
+    </div>
+
+    <h2><code>_widget_brief.html</code></h2>
+    <h3>Can Like / Not Liked</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget_brief.html" with can_like=True like_class="not-liked" like_text="Not Liked" %}
+    </div>
+
+    <h2><code>_widget_brief.html</code></h2>
+    <h3>Can Like / Liked</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget_brief.html" with can_like=True like_class="liked" like_text="Liked" %}
+    </div>
+
+    <h2><code>_widget_brief.html</code></h2>
+    <h3>Cannot Like</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget_brief.html" %}
+    </div>
+
+
+    <h2><code>_widget.html</code></h2>
+    <h3>Can Like / Not Liked</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget.html" with can_like=True like_class="not-liked" like_text="Not Liked" %}
+    </div>
+
+    <h2><code>_widget.html</code></h2>
+    <h3>Can Like / Liked</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget.html" with can_like=True like_class="liked" like_text="Liked" %}
+    </div>
+
+    <h2><code>_widget.html</code></h2>
+    <h3>Cannot Like</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget.html" %}
+    </div>
+
+    <h2><code>_widget.html</code></h2>
+    <h3>Cannot Like</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget.html" %}
+    </div>
+
+    <h2><code>_widget.html</code></h2>
+    <h3>Can Like</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget.html" with can_like=True %}
+    </div>
+
+    <h2><code>_widget.html</code></h2>
+    <h3>Cannot Like</h3>
+    <div class="like-fragement-container">
+        {% include "pinax/likes/_widget.html" %}
+    </div>
+</section>
+{% endblock %}
