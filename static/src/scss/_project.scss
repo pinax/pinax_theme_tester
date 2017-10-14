@@ -16,7 +16,7 @@
     background: linear-gradient(#05506F, #031E3B);
 }
 
-header {
+body.theme-tester > header {
     nav {
         background-color: #05506F !important;  // linear-gradient(#031E3B, #05506F 90%);
         color: white;

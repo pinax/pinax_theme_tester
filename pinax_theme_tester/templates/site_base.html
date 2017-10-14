@@ -10,7 +10,8 @@
 
 {% block site_brand %}{% endblock %}
 
-{% block body_class_base %}{% if current_config %}config-{{ current_config.label }}{% endif %} {% block body_class %}{% endblock %}{% endblock %}
+{% block head_title %}{% if current_config %}{{ current_config.title }}{% endif %}{% endblock %}
+{% block body_class_base %}theme-tester {% if current_config %}config-{{ current_config.label }}{% endif %} {% block body_class %}{% endblock %}{% endblock %}
 
 {% block extra_head_base %}
     {% block extra_head %}{% endblock %}
@@ -32,7 +33,7 @@
     <ul class="navbar-nav">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">{{ current_config.title }}</a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu dropdown-menu-right">
                 {% for v in current_config.views %}
                     {% if v.menu %}
                         <a class="dropdown-item" href="{{ v.resolved_path }}">
