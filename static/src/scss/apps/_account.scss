@@ -11,8 +11,18 @@ body.account {
         @extend .nav;
         @extend .flex-column;
         @extend .nav-pills;
+        .heading {
+            padding: 0.5rem 1rem;
+            text-transform: uppercase;
+            color: $gray-500;
+            letter-spacing: 0.1em;
+        }
         a {
           @extend .nav-link;
+          color: $gray-700;
+        }
+        a:hover {
+            background: $gray-200;
         }
       }
       section {
