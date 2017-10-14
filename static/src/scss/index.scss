@@ -10,25 +10,3 @@
 @import "apps/index";
 
 @import "project";
-
-
-.fragment-container {
-    margin-top: 20px;
-    border: 2px solid $gray-200;
-    border-radius: 5px;
-    padding: 20px;
-
-    > h1 {
-        border-bottom: 2px solid $gray-200;
-    }
-    > h2 {
-        margin-top: 40px;
-        code {
-            background: none;
-        }
-    }
-    > h3 {
-        color: $gray-600;
-        font-weight: 300;
-    }
-}

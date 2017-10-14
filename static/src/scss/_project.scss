@@ -16,25 +16,59 @@
     background: linear-gradient(#05506F, #031E3B);
 }
 
-body.theme-tester > header {
-    nav {
-        background-color: #05506F !important;  // linear-gradient(#031E3B, #05506F 90%);
-        color: white;
-        .navbar-nav {
-            .nav-link {
-                color: white;
-            }
-            .nav-link:hover {
-                color: $gray-200;
-            }
-            .show {
+body.theme-tester {
+    background-color: $gray-100;
+    > header {
+        nav {
+            background-color: #05506F !important;  // linear-gradient(#031E3B, #05506F 90%);
+            color: white;
+            .navbar-nav {
                 .nav-link {
-                    color: $gray-400;
+                    color: white;
+                }
+                .nav-link:hover {
+                    color: $gray-200;
+                }
+                .show {
+                    .nav-link {
+                        color: $gray-400;
+                    }
+                }
+                .dropdown-menu-right {
+                    min-width: 29rem;
                 }
             }
-            .dropdown-menu-right {
-                min-width: 29rem;
+        }
+    }
+
+    .fragment-container {
+        margin-top: 20px;
+        background: white;
+        border: 2px solid $gray-200;
+        border-radius: 5px;
+        padding: 20px;
+        margin-bottom: 20px;
+        h1 {
+            color: $gray-700;
+            border-bottom: 2px solid $gray-200;
+            margin-bottom: -20px;
+        }
+        h2 {
+            font-size: 1.3em;
+            .variation {
+                font-weight: 200;
+                color: $gray-400;
+                float: right;
             }
+            code {
+                color: $gray-300;
+                background: none;
+            }
+            padding: 12px;
+            border-radius: 3px;
+            background: $gray-700;
+            margin-top: 40px;
+            margin-bottom: 20px;
         }
     }
 }

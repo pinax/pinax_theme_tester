@@ -6,38 +6,32 @@
 <section class="fragment-container">
     <h1>Pinax Invitations Fragments</h1>
 
-    <h2><code>_invite_form.html</code></h2>
-    <h3>Can Send</h3>
+    <h2><div class="variation">Can Send</div><code>_invite_form.html</code></h2>
     <div class="invitation-fragement-container">
         {% include "pinax/invitations/_invite_form.html" with user=can_send_user %}
     </div>
 
-    <h2><code>_invite_form.html</code></h2>
-    <h3>Cannot Send</h3>
+    <h2><div class="variation">Cannot Send</div><code>_invite_form.html</code></h2>
     <div class="invitation-fragement-container">
         {% include "pinax/invitations/_invite_form.html" %}
     </div>
 
-    <h2><code>_invited.html</code></h2>
-    <h3>With Invitations</h3>
+    <h2><div class="variation">With Invitations</div><code>_invited.html</code></h2>
     <div class="invitation-fragement-container">
         {% include "pinax/invitations/_invited.html" with invited_list=invites %}
     </div>
 
-    <h2><code>_invited.html</code></h2>
-    <h3>No Invitations</h3>
+    <h2><div class="variation">No Invitations</div><code>_invited.html</code></h2>
     <div class="invitation-fragement-container">
         {% include "pinax/invitations/_invited.html" %}
     </div>
 
-    <h2><code>_invites_remaining.html</code></h2>
-    <h3>Remaining Invites</h3>
+    <h2><div class="variation">Remaining Invites</div><code>_invites_remaining.html</code></h2>
     <div class="invitation-fragement-container">
         {% include "pinax/invitations/_invites_remaining.html" with invites_remaining=total_invites_remaining %}
     </div>
 
-    <h2><code>_invites_remaining.html</code></h2>
-    <h3>No Remaining Invites</h3>
+    <h2><div class="variation">No Remaining Invites</div><code>_invites_remaining.html</code></h2>
     <div class="invitation-fragement-container">
         {% include "pinax/invitations/_invites_remaining.html" %}
     </div>
