@@ -7,6 +7,7 @@ window.Popper = require('popper.js');
 require('bootstrap');
 
 import ajaxSendMethod from './ajax';
+import handleMessageDismiss from './messages';
 
 $(() => {
     $(document).ajaxSend(ajaxSendMethod);
@@ -24,4 +25,6 @@ $(() => {
         e.preventDefault();
         $('#accountLogOutForm').submit();
     });
+
+    handleMessageDismiss();
 });
