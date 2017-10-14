@@ -20,5 +20,9 @@ def as_view(template, **kwargs):
 
 @require_POST
 def set_template_set(request):
+    from .configs import CONFIG_MAP  # ugly, I know, but whatever
     request.session["template_set"] = request.POST.get("template_set", None)
+    config = CONFIG_MAP.get(request.session["template_set"])
+    if config:
+        return redirect([v for v in config.views if v.menu][0].resolved_path())
     return redirect("home")
