@@ -8,3 +8,4 @@ pinax-announcements
 pinax-cohorts
 pinax-stripe
 pinax-messages
+pinax-invitations
