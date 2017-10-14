@@ -7,3 +7,4 @@ pinax-blog
 pinax-announcements
 pinax-cohorts
 pinax-stripe
+pinax-messages

@@ -4,7 +4,8 @@ from . import (
     blog,
     announcements,
     cohorts,
-    stripe
+    stripe,
+    messages
 )
 
 CONFIG_MAP = {
@@ -13,5 +14,6 @@ CONFIG_MAP = {
     blog.label: blog,
     announcements.label: announcements,
     cohorts.label: cohorts,
-    stripe.label: stripe
+    stripe.label: stripe,
+    messages.label: messages
 }
