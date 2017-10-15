@@ -31,6 +31,7 @@ body.account {
               margin-top: 20px;
               width: 100%;
               button {
+                  cursor: pointer;
                   @extend .btn;
                   @extend .btn-primary;
               }
@@ -77,6 +78,7 @@ body.account {
                     width: 100%;
                     legend {}
                     button {
+                        cursor: pointer;
                         @extend .btn;
                         @extend .btn-primary;
                     }

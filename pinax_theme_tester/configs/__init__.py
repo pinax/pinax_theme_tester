@@ -8,7 +8,8 @@ from . import (
     messages,
     likes,
     invitations,
-    documents
+    documents,
+    notifications
 )
 
 CONFIG_MAP = {
@@ -21,5 +22,6 @@ CONFIG_MAP = {
     messages.label: messages,
     likes.label: likes,
     invitations.label: invitations,
-    documents.label: documents
+    documents.label: documents,
+    notifications.label: notifications
 }
