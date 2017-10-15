@@ -1,0 +1,38 @@
+[
+{
+    "model": "blog.section",
+    "pk": 1,
+    "fields": {
+        "name": "Technical Rants",
+        "slug": "technical-rants",
+        "enabled": true
+    }
+},
+{
+    "model": "blog.section",
+    "pk": 2,
+    "fields": {
+        "name": "Pinax Reports",
+        "slug": "pinax-reports",
+        "enabled": true
+    }
+},
+{
+    "model": "blog.section",
+    "pk": 3,
+    "fields": {
+        "name": "News",
+        "slug": "news",
+        "enabled": true
+    }
+},
+{
+    "model": "blog.section",
+    "pk": 4,
+    "fields": {
+        "name": "How To Articles",
+        "slug": "how-tos",
+        "enabled": true
+    }
+}
+]
