@@ -6,13 +6,15 @@ body {
 main {
   flex: 1;
   > div {
-    @extend .container;
+    @include make-container();
+    @include make-container-max-widths();
   }
 }
 footer {
   padding: 20px 0;
   background-color: $footer-bg-color;
   > div {
-    @extend .container;
+    @include make-container();
+    @include make-container-max-widths();
   }
 }

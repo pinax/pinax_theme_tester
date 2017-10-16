@@ -37,6 +37,38 @@
     </header>
 
     <h2>
+        <div class="variation">With Dropdown</div>
+        <code>_nav.html</code>
+    </h2>
+    <header>
+        <nav>
+            <div class="topbar-container">
+                <a href="#">Your Site Name</a>
+                <button class="expand" type="button" data-toggle="collapse" data-target=".nav-container" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i></i>
+                </button>
+
+                <div class="nav-container">
+                    <ul class="main-bar">  {# copied in instead of including becuase this demo site is also using _nav.html #}
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="">Dropdown Menu</a>
+                            <div class="dropdown-menu">
+                                <a href="">Item 1</a>
+                                <a href="">Item 2</a>
+                                <hr />
+                                <a href="">Item 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                    {% include "_account_bar.html" with ACCOUNT_OPEN_SIGNUP=True %}
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h2>
         <code>pagination/_pagination.html</code>
     </h2>
     <div class="pagination-container">

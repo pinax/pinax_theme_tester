@@ -1,0 +1,26 @@
+form {
+    .has-error {
+        .help-block {
+            color: $red;
+        }
+    }
+    p.help-text {
+        margin-top: 35px;
+        font-size: 80%;
+    }
+    .form-actions {
+        text-align: right;
+        a.cancel {
+            @extend .btn;
+            @include button-variant($gray-100, $gray-100);
+        }
+    }
+    button {
+        @include button-variant($blue, $blue);
+    }
+}
+
+button {
+    cursor: pointer;
+    @extend .btn;
+}

@@ -8,8 +8,13 @@ header {
 }
 
 div.topbar-container {
-  @extend .container;
-  >a {
+  display: flex;
+  @include make-container();
+  @include make-container-max-widths();
+  form {
+    margin-top: 0px !important;
+  }
+  > a {
     @extend .navbar-brand;
   }
   button.expand {
@@ -27,23 +32,21 @@ div.topbar-container {
 
 .main-bar {
   @extend .navbar-nav;
-  @extend .mr-auto;
+  margin-right: auto !important;
   li {
     @extend .nav-item;
-    &.dropdown {
-      @extend .dropdown;
-      .dropdown-menu {
-        @extend .dropdown-menu;
-        a {
-          @extend .dropdown-item;
-        }
-      }
-    }
     a {
       @extend .nav-link;
     }
+    .dropdown-menu {
+      a {
+        @extend .dropdown-item;
+      }
+    }
   }
 }
+
+
 
 .account-bar {
   @extend .navbar-nav;
@@ -87,18 +90,14 @@ nav.page-navigation {
       a {
         @extend .page-link;
       }
-      &.prev {
-        i {
-          @include icon(long-arrow-left);
-          margin-right: 10px;
-        }
-      }
-      &.next {
-        i {
-          @include icon(long-arrow-right);
-          margin-left: 10px;
-        }
-      }
     }
+  }
+  .prev i {
+    @include icon(long-arrow-left);
+    margin-right: 10px;
+  }
+  .next i {
+    @include icon(long-arrow-right);
+    margin-left: 10px;
   }
 }

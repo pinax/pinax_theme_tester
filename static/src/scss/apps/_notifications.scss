@@ -1,6 +1,7 @@
 body.account.notices {
     nav.settings-nav .notice-settings {
-        @extend .active;
+        color: $nav-pills-link-active-color;
+        background-color: $nav-pills-link-active-bg;
     }
     @media (min-width: 576px) {  // @include media-breakpoint-up(xs) { ... } seems to be ignored
         .subnav-container {
