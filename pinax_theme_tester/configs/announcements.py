@@ -35,6 +35,7 @@ class ViewConfig(BaseViewConfig):
 views = [
     ViewConfig(pattern=r"^pinax-announcements/$", template="pinax/announcements/announcement_list.html", name="announcement_list", pattern_kwargs={}, announcement_list=announcement_list),
     ViewConfig(pattern=r"^pinax-announcements/create/$", template="pinax/announcements/announcement_form.html", name="announcement_create", pattern_kwargs={}, form=AnnouncementForm()),
+    ViewConfig(pattern=r"^pinax-announcements/(?P<pk>\d+)/update/$", template="pinax/announcements/announcement_form.html", name="announcement_update", pattern_kwargs={"pk": 1}, form=AnnouncementForm(), announcement=announcement),
     ViewConfig(pattern=r"^pinax-announcements/(?P<pk>\d+)/$", template="pinax/announcements/announcement_detail.html", name="announcement_detail", pattern_kwargs={"pk": 1}, announcement=announcement),
     ViewConfig(pattern=r"^pinax-announcements/(?P<pk>\d+)/delete/$", template="pinax/announcements/announcement_confirm_delete.html", name="announcement_delete", pattern_kwargs={"pk": 1}, announcement=announcement),
     ViewConfig(pattern=r"^pinax-announcements/(?P<pk>\d+)/update/$", template="pinax/blog/blog_post.html", name="announcement_update", pattern_kwargs={"pk": 1}, menu=False),

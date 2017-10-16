@@ -6,7 +6,6 @@ body.account {
         background-color: $nav-pills-link-active-bg;
     }
     .subnav-container {
-      margin-top: 20px;
       @extend .d-sm-flex;
     }
     .settings-nav {
@@ -29,7 +28,6 @@ body.account {
     }
     section {
         form {
-            margin-top: 20px;
             width: 100%;
         }
     }
