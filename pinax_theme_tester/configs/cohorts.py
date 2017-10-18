@@ -11,6 +11,18 @@ cohort = {
     "pk": 1,
     "name": "Bacon Ipsum Dolor",
     "created": timezone.now(),
+    "members": [
+        dict(email="foo@bar.com"),
+        dict(email="foo@bar.com", user="username"),
+        dict(email="foo@bar.com", user="username"),
+        dict(email="foo@bar.com", invited=True),
+        dict(email="foo@bar.com"),
+        dict(email="foo@bar.com"),
+        dict(email="foo@bar.com", invited=True),
+        dict(email="foo@bar.com", user="username"),
+        dict(email="foo@bar.com")
+    ],
+    "member_counts": dict(users=3, total=9)
 }
 cohort_list = [
     cohort,
