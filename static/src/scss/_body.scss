@@ -10,6 +10,9 @@ main {
     @include make-container();
     @include make-container-max-widths();
   }
+  .jumbotron {
+    margin-top: -20px;
+  }
 }
 footer {
   padding: 20px 0;
