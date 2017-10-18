@@ -7,7 +7,7 @@ from pinax.messages.forms import MessageReplyForm
 
 from .base import ViewConfig as BaseViewConfig
 
-####  port back?
+# port back to pinax-messages
 from django import forms
 from django.contrib.auth import get_user_model
 from pinax.messages.forms import UserModelChoiceField
@@ -38,7 +38,7 @@ class NewMessageForm(forms.ModelForm):
     class Meta:
         model = Message
         fields = ['to_user', 'subject', 'content']
-######
+# end of pinax-messages port
 
 
 class FakeUser:

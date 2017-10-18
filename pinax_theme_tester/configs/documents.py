@@ -40,7 +40,7 @@ views = [
     ViewConfig(pattern=r"^f/create/$", template="pinax/documents/folder_create.html", name="folder_create", pattern_kwargs={}, form=FolderCreateForm(folders=Folder.objects.all())),
     ViewConfig(pattern=r"^f/(?P<pk>\d+)/$", template="pinax/documents/folder_detail.html", name="folder_detail", pattern_kwargs={"pk": 1}, folder=folder, members=[member]),
     ViewConfig(pattern=r"^f/(?P<pk>\d+)/share/$", template="pinax/documents/folder_share.html", name="folder_share", pattern_kwargs={"pk": 1}, form=FolderShareForm(), folder=folder),
-    ViewConfig(pattern=r"^f/(?P<pk>\d+)/delete/$",template="pinax/documents/folder_confirm_delete.html", name="folder_delete", pattern_kwargs={"pk": 1}),
+    ViewConfig(pattern=r"^f/(?P<pk>\d+)/delete/$", template="pinax/documents/folder_confirm_delete.html", name="folder_delete", pattern_kwargs={"pk": 1}),
 ]
 urlpatterns = [
     view.url()
