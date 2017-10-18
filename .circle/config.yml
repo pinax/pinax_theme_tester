@@ -1,0 +1,29 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2
+jobs:
+  # deploy to templates.pinaxproject.com
+  deploy:
+    docker:
+      - image: buildpack-deps:trusty-scm
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+      - deploy:
+          name: Deployment
+          command: |
+            bin/deployment/auth.sh
+            bin/deployment/deploy.sh primary
+            bin/deployment/slack-notify.sh primary
+workflows:
+  version: 2
+  test-and-deploy:
+    jobs:
+      - deploy:
+          filters:
+            branches:
+              only: master
