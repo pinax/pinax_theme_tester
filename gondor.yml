@@ -1,0 +1,12 @@
+cluster: ""
+buildpack: https://github.com/heroku/heroku-buildpack-multi.git
+site: pinax/templates
+branches:
+  master: primary
+deploy:
+  services:
+  - web
+vcs:
+  branch: ""
+  commit: ""
+instances: {}

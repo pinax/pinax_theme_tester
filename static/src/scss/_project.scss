@@ -75,4 +75,16 @@ body.theme-tester {
 footer {
     background: #031E3B;
     color: white;
+    > div {
+        display: flex;
+        justify-content: space-between;
+        a {
+            color: #AAA;
+            &:hover,
+            &:link,
+            &:active {
+                color: #CCC;
+            }
+        }
+    }
 }

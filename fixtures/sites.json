@@ -4,15 +4,15 @@
         "model": "sites.site",
         "fields": {
             "domain": "localhost:8000",
-            "name": "example.com [localhost]"
+            "name": "Pinax Templates"
         }
     },
     {
         "pk": 2,
         "model": "sites.site",
         "fields": {
-            "domain": "example.com",
-            "name": "example.com"
+            "domain": "templates.pinaxproject.com",
+            "name": "Pinax Templates"
         }
     }
 ]

@@ -16,6 +16,8 @@ DATABASES = {
 
 ALLOWED_HOSTS = [
     "localhost",
+    "templates.pinaxproject.com",
+    os.environ.get("GONDOR_INSTANCE_DOMAIN")
 ]
 
 # Local time zone for this installation. Choices can be found here:
@@ -107,6 +109,7 @@ TEMPLATES = [
 
 MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
