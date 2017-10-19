@@ -6,13 +6,13 @@ body {
 main {
   margin-top: 20px;
   flex: 1;
-  > div {
-    @include make-container();
-    @include make-container-max-widths();
-  }
   .jumbotron {
     margin-top: -20px;
   }
+}
+#content_body {
+  @include make-container();
+  @include make-container-max-widths();
 }
 footer {
   padding: 20px 0;
