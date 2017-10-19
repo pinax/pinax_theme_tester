@@ -93,6 +93,7 @@ messages = [
     thread,
     thread_read
 ]
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-messages.svg"
 label = "messages"
 title = "Pinax Messages"
 url_namespace = "pinax_messages"

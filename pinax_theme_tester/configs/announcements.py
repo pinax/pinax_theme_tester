@@ -7,6 +7,7 @@ from pinax.announcements.forms import AnnouncementForm
 from .base import ViewConfig as BaseViewConfig
 
 
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-announcements.svg"
 announcement = {
     "pk": 1,
     "title": "Bacon ipsum dolor amet corned beef beef tri-tip venison",

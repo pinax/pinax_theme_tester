@@ -58,11 +58,9 @@ body.account {
     &.account-signup,
     &.account-password-reset,
     &.account-email-confirmation {
-        main {
-            > div {
-                @extend .d-flex;
-                @extend .justify-content-center;
-            }
+        #content_body {
+            @extend .d-flex;
+            @extend .justify-content-center;
         }
         form {
             margin-top: 0px;

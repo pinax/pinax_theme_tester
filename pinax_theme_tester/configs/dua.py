@@ -4,7 +4,7 @@ from account.forms import LoginUsernameForm, SignupForm, ChangePasswordForm, Set
 
 from .base import ViewConfig
 
-
+patch = "http://pinaxproject.com/pinax-design/patches/django-user-accounts.svg"
 label = "dua"
 title = "Django User Accounts"
 views = [

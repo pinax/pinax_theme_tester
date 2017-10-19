@@ -21,6 +21,7 @@ folder = Member(id=1, name="My Folder", icon="folder-open")
 member = Member(id=1, name="My Document.txt", icon="file", get_absolute_url="/foo/", size=373737, modified=datetime(2017, 10, 1, 13, 21), shared_ui=True, modified_by=user, download_url="/foo/download/", delete_url="/foo/delete/")
 
 
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-documents.svg"
 label = "documents"
 title = "Pinax Documents"
 url_namespace = "pinax_documents"

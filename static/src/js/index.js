@@ -26,5 +26,10 @@ $(() => {
         $('#accountLogOutForm').submit();
     });
 
+    $('[data-show-menu]').click(e => {
+        $('body').toggleClass('show-menu');
+        $($(e.currentTarget).data('show')).collapse('show');
+    });
+
     handleMessageDismiss();
 });

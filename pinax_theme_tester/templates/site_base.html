@@ -8,45 +8,17 @@
     <link href="{% static "css/app.css" %}" rel="stylesheet" />
 {% endblock %}
 
-{% block site_brand %}{% endblock %}
-
 {% block head_title %}{% if current_config %}{{ current_config.title }}{% endif %}{% endblock %}
-{% block body_class_base %}theme-tester {% if current_config %}config-{{ current_config.label }}{% endif %} {% block body_class %}{% endblock %}{% endblock %}
+{% block body_class_base %}theme-tester {% if current_view %}show-menu{% endif %} {% if current_config %}config-{{ current_config.label }}{% endif %} {% block body_class %}{% endblock %}{% endblock %}
 
 {% block extra_head_base %}
     {% block extra_head %}{% endblock %}
 {% endblock %}
 
-{% block nav %}
-    <form class="form-inline mr-auto" method="post" action="{% url "set_template_set" %}">
-        {% csrf_token %}
-        <div class="form-group">
-            <select name="template_set" class="form-control" onchange="$(this).closest('form').submit()">
-                <option>Select a Template Set</option>
-                {% for label, config in available_configs.items %}
-                    <option value="{{ label }}" {% if current_config.label == config.label %}selected{% endif %}>{{ config.title }}</option>
-                {% endfor %}
-            </select>
-        </div>
-    </form>
-    {% if current_config %}
-    <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="">{{ current_config.title }}</a>
-            <div class="dropdown-menu dropdown-menu-right">
-                {% for v in current_config.views %}
-                    {% if v.menu %}
-                        <a class="dropdown-item" href="{{ v.resolved_path }}">
-                            {{ v.template }}
-                        </a>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </li>
-    </ul>
-    {% endif %}
-{% endblock %}
 
+{% block content_left %}
+    {% include "_menu.html" %}
+{% endblock %}
 
 {% block account_bar %}{% endblock %}
 

@@ -45,6 +45,7 @@ paginator = {
     "page_range": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 }
 
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-likes.svg"
 label = "blog"
 title = "Pinax Blog"
 url_namespace = "pinax_blog"

@@ -88,3 +88,110 @@ footer {
         }
     }
 }
+
+header nav div.topbar-container > a,
+header nav div.topbar-container > a:hover {
+    color: white;
+}
+.nav-btn,
+.nav-btn:hover,
+.nav-btn:active,
+.nav-btn:link,
+.nav-btn:focus {
+    color: $gray-100;
+    i {
+        text-align: center;
+        width: 1.3rem;
+        @include icon(bars);
+    }
+    .text {
+        display: none;
+    }
+
+}
+aside {
+    position: absolute;
+    top: 0;
+    height: calc(100vh - 64px);
+    background: darken($gray-800, 10%);
+    transition: width 300ms;
+    width: 4.3rem;
+    opacity: 1;
+    overflow: hidden;
+    padding-top: 10px;
+    z-index: 999;
+    img.patch {
+        width: 2rem;
+        margin: 0.5rem 1rem;
+    }
+    .nav-header {
+        text-align: center;
+    }
+    .nav-text {
+        padding: 0.5rem 1rem;
+        display: none;
+    }
+    .nav-item {
+        background: $gray-800;
+    }
+    .nav-item:hover,
+    .nav-item.selected {
+        background: #05506F;
+        .nav-link {
+            color: $gray-300;
+            .template {
+                color: $gray-400;
+            }
+        }
+    }
+    .nav-header {
+        color: $gray-500;
+    }
+    .nav-link {
+        color: $gray-500;
+        display: none;
+        .template {
+            color: $gray-600;
+            display: block;
+            font-size: 0.7rem;
+            font-family: "Menlo", "Courier New";
+        }
+    }
+}
+
+body.show-menu {
+    .nav-btn {
+        i {
+            @include icon(minus);
+        }
+        .text {
+            margin-left: 10px;
+            display: inline-block;
+        }
+    }
+    aside {
+        opacity: 1;
+        width: 300px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .nav-link {
+            display: block;
+        }
+        .nav-text {
+            display: inline-block;
+            padding-left: 0;
+            color: $gray-400;
+            vertical-align: -0.1rem;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        img.patch {
+            margin-left: 1.23rem;
+            margin-right: 0.5rem;
+        }
+        .nav-header {
+            text-align: left;
+        }
+    }
+}

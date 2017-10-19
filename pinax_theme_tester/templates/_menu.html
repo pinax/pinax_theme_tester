@@ -1,0 +1,24 @@
+<aside id="menu">
+    <nav class="nav flex-column" id="app-nav" data-children=".config-menu">
+        {% for label, config in available_configs.items %}
+        <div class="config-menu">
+            <div class="nav-header">
+                <img data-show-menu="#menu" data-show="#config-{{ config.label }}" src="{{ config.patch }}" class="patch" alt="{{ config.title }}" />
+                <a class="nav-text" data-toggle="collapse" href="#config-{{ config.label }}">{{ config.title }}</a>
+            </div>
+            <div id="config-{{ config.label }}" class="collapse {% for v in config.views %}{% if current_view.name == v.name %}show{% endif %}{% endfor %}" data-parent="#app-nav">
+            {% for v in config.views %}
+                {% if v.menu %}
+                <div class="nav-item {% if current_view.name == v.name %}selected{% endif %}">
+                    <a class="nav-link" href="{{ v.resolved_path }}">
+                        {{ v.display_name }}
+                        <span class="template">{{ v.short_template_name }}</span>
+                    </a>
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </nav>
+</aside>

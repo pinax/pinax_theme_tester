@@ -22,6 +22,7 @@ subscriptions = [
     subscription
 ]
 
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-stripe.svg"
 label = "stripe"
 title = "Pinax Stripe"
 

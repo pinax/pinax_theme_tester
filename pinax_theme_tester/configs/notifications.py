@@ -43,6 +43,7 @@ with_email_context.update(
 )
 
 
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-notifications.svg"
 label = "notifications"
 title = "Pinax Notifications"
 url_namespace = "pinax_notifications"

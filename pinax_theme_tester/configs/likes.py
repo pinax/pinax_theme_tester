@@ -22,6 +22,7 @@ context = dict(
     counts_text="Fantastics"
 )
 
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-likes.svg"
 label = "likes"
 title = "Pinax Likes"
 
