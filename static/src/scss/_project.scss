@@ -93,45 +93,59 @@ header nav div.topbar-container > a,
 header nav div.topbar-container > a:hover {
     color: white;
 }
-.nav-btn,
-.nav-btn:hover,
-.nav-btn:active,
-.nav-btn:link,
-.nav-btn:focus {
-    color: $gray-100;
-    i {
-        text-align: center;
-        width: 1.3rem;
-        @include icon(bars);
-    }
-    .text {
-        display: none;
-    }
-
-}
 aside {
+    .toggle-container button,
+    .nav-header img {
+        margin-left: 1.15rem;
+    }
+    .btn-menu-toggle,
+    .btn-menu-toggle:hover,
+    .btn-menu-toggle:active,
+    .btn-menu-toggle:link,
+    .btn-menu-toggle:focus {
+        padding: 0.5rem 0;
+        color: $gray-400;
+        text-align: center;
+        width: 2rem;
+        i {
+            @include icon(bars);
+        }
+    }
     position: absolute;
     top: 0;
     height: calc(100vh - 64px);
     background: darken($gray-800, 10%);
-    transition: width 300ms;
+    transition: width 200ms;
     width: 4.3rem;
-    opacity: 1;
     overflow: hidden;
     padding-top: 10px;
     z-index: 999;
     img.patch {
         width: 2rem;
-        margin: 0.5rem 1rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
     }
     .nav-header {
-        text-align: center;
+        cursor: pointer;
+        color: $gray-500;
+        &:hover {
+            background: $gray-800;
+        }
+        white-space: nowrap;
     }
     .nav-text {
-        padding: 0.5rem 1rem;
-        display: none;
+        display: inline-block;
+        color: $gray-400;
+        vertical-align: -0.1rem;
+        &:hover {
+            text-decoration: none;
+        }
+        opacity: 0;
+        transition: opacity 200ms;
     }
     .nav-item {
+        white-space: nowrap;
         background: $gray-800;
     }
     .nav-item:hover,
@@ -143,9 +157,6 @@ aside {
                 color: $gray-400;
             }
         }
-    }
-    .nav-header {
-        color: $gray-500;
     }
     .nav-link {
         color: $gray-500;
@@ -160,17 +171,16 @@ aside {
 }
 
 body.show-menu {
-    .nav-btn {
+    .btn-menu-toggle,
+    .btn-menu-toggle:hover,
+    .btn-menu-toggle:active,
+    .btn-menu-toggle:link,
+    .btn-menu-toggle:focus {
         i {
             @include icon(minus);
         }
-        .text {
-            margin-left: 10px;
-            display: inline-block;
-        }
     }
     aside {
-        opacity: 1;
         width: 300px;
         overflow-y: auto;
         overflow-x: hidden;
@@ -178,20 +188,11 @@ body.show-menu {
             display: block;
         }
         .nav-text {
-            display: inline-block;
+            opacity: 1;
             padding-left: 0;
-            color: $gray-400;
-            vertical-align: -0.1rem;
-            &:hover {
-                text-decoration: none;
-            }
-        }
-        img.patch {
-            margin-left: 1.23rem;
-            margin-right: 0.5rem;
-        }
-        .nav-header {
-            text-align: left;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            font-size: 1rem;
         }
     }
 }

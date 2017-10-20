@@ -27,8 +27,15 @@ $(() => {
     });
 
     $('[data-show-menu]').click(e => {
+        if ($('body').hasClass('show-menu')) {
+            $($(e.currentTarget).data('show')).collapse('toggle');
+        } else {
+            $('body').toggleClass('show-menu');
+            $($(e.currentTarget).data('show')).collapse('show');
+        }
+    });
+    $('.btn-menu-toggle').click(() => {
         $('body').toggleClass('show-menu');
-        $($(e.currentTarget).data('show')).collapse('show');
     });
 
     handleMessageDismiss();

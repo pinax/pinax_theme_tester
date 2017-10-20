@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
 from .configs import CONFIG_MAP
-from .views import as_view, set_template_set
+from .views import as_view
 
 
 urlpatterns = [
