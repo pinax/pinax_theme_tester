@@ -5,8 +5,7 @@ from .views import as_view, set_template_set
 
 
 urlpatterns = [
-    url(r"^$", as_view("homepage.html"), name="home"),
-    url(r"^__set_tmpl/$", set_template_set, name="set_template_set")
+    url(r"^$", as_view("homepage.html"), name="home")
 ]
 
 for label in CONFIG_MAP:
