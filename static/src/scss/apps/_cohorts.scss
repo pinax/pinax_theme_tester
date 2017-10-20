@@ -10,7 +10,7 @@ body.pinax-cohorts {
                 i {
                     @include icon(plus);
                 }
-                padding-top: 0.35em;
+                margin-top: auto;
             }
             border-bottom: 1px solid #EEE;
             padding-bottom: 5px;
@@ -49,30 +49,82 @@ body.pinax-cohorts {
                 }
             }
         }
-        .member-user,
-        .member-invited,
-        .member-pending {
-            display: inline-block;
-            border: 1px solid #EEE;
-            padding: 2px 5px;
-            font-size: 0.8em;
-            border-radius: 4px;
-            color: white;
+    }
+}
+
+body.pinax-cohorts {
+    .email-status,
+    .dates > div {
+        display: flex;
+        justify-content: space-between;
+    }
+    .cohort-signup-code {
+        font-family: "Menlo", "Courier New";
+        font-size: 12px;
+        margin-top: 12px;
+        color: $gray-600;
+    }
+    .cohort-detail-container {
+        @include make-row();
+    }
+    .cohort-detail {
+        @include make-col-ready();
+        @extend .col-9;
+    }
+    .cohort-actions-container {
+        @include make-col-ready();
+        @extend .col-3;
+    }
+    .dates {
+        strong {
+            flex: 1;
+            text-align: right;
+            margin-right: 5px;
         }
-        .member-user {
-            background-color: $blue;
-            border-color: lighten($blue, 10%);
+    }
+
+    .cohort-invite-add-container {
+        margin-top: 20px;
+        input[name=invite_next] {
+            width: 70px;
+            margin: 0px 10px;
+        }
+        button {
+            @extend .btn-sm;
+            margin-left: 20px;
             i {
-                @include icon(user);
+                @include icon(plus);
             }
+            @extend .btn-outline-primary;
         }
-        .member-invited {
-            background-color: $indigo;
-            border-color: lighten($indigo, 10%);
+    }
+}
+
+body.pinax-cohorts {
+    .member-user,
+    .member-invited,
+    .member-pending {
+        display: inline-block;
+        border: 1px solid #EEE;
+        padding: 2px 5px;
+        font-size: 0.8em;
+        border-radius: 4px;
+        color: white;
+        white-space: nowrap;
+    }
+    .member-user {
+        background-color: $blue;
+        border-color: lighten($blue, 10%);
+        i {
+            @include icon(user);
         }
-        .member-pending {
-            background-color: $teal;
-            border-color: lighten($teal, 10%);
-        }
+    }
+    .member-invited {
+        background-color: $indigo;
+        border-color: lighten($indigo, 10%);
+    }
+    .member-pending {
+        background-color: $teal;
+        border-color: lighten($teal, 10%);
     }
 }
