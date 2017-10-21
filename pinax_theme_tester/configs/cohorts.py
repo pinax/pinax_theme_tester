@@ -22,7 +22,7 @@ cohort = {
         dict(email="foo@bar.com", user="username"),
         dict(email="foo@bar.com")
     ],
-    "member_counts": dict(users=3, total=9)
+    "member_counts": dict(users=3, total=9, pending=6)
 }
 cohort_list = [
     cohort,

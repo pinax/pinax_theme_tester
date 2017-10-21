@@ -53,19 +53,11 @@ body.pinax-cohorts {
 }
 
 body.pinax-cohorts {
-    .email-status,
-    .dates > div {
-        display: flex;
-        justify-content: space-between;
-    }
-    .cohort-signup-code {
-        font-family: "Menlo", "Courier New";
-        font-size: 12px;
-        margin-top: 12px;
-        color: $gray-600;
-    }
     .cohort-detail-container {
         @include make-row();
+        table {
+            @extend .table-sm;
+        }
     }
     .cohort-detail {
         @include make-col-ready();
@@ -74,13 +66,6 @@ body.pinax-cohorts {
     .cohort-actions-container {
         @include make-col-ready();
         @extend .col-3;
-    }
-    .dates {
-        strong {
-            flex: 1;
-            text-align: right;
-            margin-right: 5px;
-        }
     }
 
     .cohort-invite-add-container {
@@ -96,6 +81,65 @@ body.pinax-cohorts {
                 @include icon(plus);
             }
             @extend .btn-outline-primary;
+        }
+    }
+
+    .meta {
+        display: flex;
+        justify-content: space-between;
+        color: $gray-600;
+        font-size: 0.9rem;
+    }
+
+    .cohort-invite-add-container {
+        form {
+            input,
+            button {
+                margin: 0;
+                display: inline-block;
+            }
+            button {
+                margin-left: 2px;
+            }
+        }
+    }
+
+    .pending-invites-container {
+        margin: 20px 0;
+        button {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    .pending-invites-list-container {
+        @extend .list-group;
+        .waiting-list-item {
+            @extend .list-group-item;
+            padding: 0.25rem 0.75rem;
+            .invitee {
+                font-weight: 600;
+            }
+            .entry-created {
+                font-size: 0.8rem;
+                color: $gray-800;
+                line-height: 2;
+                font-weight: 300;
+            }
+            .invitee-add-form {
+                display: flex;
+                justify-content: space-between;
+                button {
+                    padding: 0.1rem 0.25rem;
+                    font-size: 0.75rem;
+                    line-height: .9;
+                    border-radius: 0.2rem;
+                    margin-bottom: 1px;
+                }
+                i {
+                    @include icon(plus);
+                }
+            }
         }
     }
 }
