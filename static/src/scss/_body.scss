@@ -22,3 +22,12 @@ footer {
     @include make-container-max-widths();
   }
 }
+
+// Right align links inside a header
+h1, h2, h3, h4 {
+  display: flex;
+  justify-content: space-between;
+  a {
+      margin-top: auto;
+  }
+}

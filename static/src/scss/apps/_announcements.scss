@@ -1,11 +1,9 @@
 body.announcements {
     h2 {
         a {
-            float: right;
             @extend .btn;
             @extend .btn-sm;
             @include button-variant($blue, $blue);
-            margin-top: 3px;
         }
     }
     .announcement {
