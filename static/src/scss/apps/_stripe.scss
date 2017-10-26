@@ -13,7 +13,7 @@ body.pinax-stripe {
         a {
             @extend .btn;
             @extend .btn-sm;
-            @include button-variant($blue, $blue);
+            @include button-variant($primary, $primary);
         }
     }
     &.pinax-stripe-subscriptions,

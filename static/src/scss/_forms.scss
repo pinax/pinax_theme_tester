@@ -16,11 +16,11 @@ form {
         }
         .delete {
             @extend .btn;
-            @include button-variant($red, $red);
+            @include button-variant($danger, $danger);
         }
     }
     button {
-        @include button-variant($blue, $blue);
+        @include button-variant($primary, $primary);
     }
 }
 

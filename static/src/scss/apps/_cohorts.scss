@@ -157,8 +157,8 @@ body.pinax-cohorts {
         white-space: nowrap;
     }
     .member-user {
-        background-color: $blue;
-        border-color: lighten($blue, 10%);
+        background-color: $primary;
+        border-color: lighten($primary, 10%);
         i {
             @include icon(user);
         }

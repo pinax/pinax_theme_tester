@@ -94,7 +94,7 @@
             }
             a.current-section,
             a.current-section:hover {
-                background: $blue;  // @extend .active changes blog post teaser to have color: white;
+                background: $primary;  // @extend .active changes blog post teaser to have color: white;
                 color: white;
             }
             .heading {

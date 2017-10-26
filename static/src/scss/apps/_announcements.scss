@@ -3,7 +3,7 @@ body.announcements {
         a {
             @extend .btn;
             @extend .btn-sm;
-            @include button-variant($blue, $blue);
+            @include button-variant($primary, $primary);
         }
     }
     .announcement {
@@ -11,7 +11,7 @@ body.announcements {
         margin: 20px 0;
         a.announcement-edit-link {
             @extend .btn;
-            @include button-outline-variant($blue);
+            @include button-outline-variant($primary);
             padding: 0.25rem 0.5rem;
             font-size: 0.8rem;
             line-height: 1;
