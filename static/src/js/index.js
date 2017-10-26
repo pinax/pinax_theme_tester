@@ -3,8 +3,7 @@ window.jQuery = window.$ = require('jquery');
 
 const $ = window.$;
 
-window.Popper = require('popper.js');
-require('bootstrap');
+require('bootstrap/dist/js/bootstrap.bundle');
 
 import ajaxSendMethod from './ajax';
 import handleMessageDismiss from './messages';
