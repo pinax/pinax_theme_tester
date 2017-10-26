@@ -157,18 +157,21 @@ body.pinax-cohorts {
         white-space: nowrap;
     }
     .member-user {
-        background-color: $primary;
-        border-color: lighten($primary, 10%);
+        background-color: $success;
+        border-color: lighten($success, 10%);
         i {
             @include icon(user);
         }
+        color: lighten($success, 50%);
     }
     .member-invited {
-        background-color: $indigo;
-        border-color: lighten($indigo, 10%);
+        background-color: lighten($success, 50%);
+        border-color: lighten($success, 20%);
+        color: $success;
     }
     .member-pending {
-        background-color: $teal;
-        border-color: lighten($teal, 10%);
+        background-color: $light;
+        border-color: darken($light, 20%);
+        color: $dark;
     }
 }
