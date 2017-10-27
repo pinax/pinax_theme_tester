@@ -173,6 +173,8 @@ LOGGING = {
     }
 }
 
+PINAX_STRIPE_PUBLIC_KEY = os.environ.get("PINAX_STRIPE_PUBLIC_KEY", "foobar")
+
 FIXTURE_DIRS = [
     os.path.join(PROJECT_ROOT, "fixtures"),
 ]

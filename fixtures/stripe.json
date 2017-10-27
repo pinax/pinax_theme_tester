@@ -1,0 +1,34 @@
+[
+{
+    "model": "pinax_stripe.plan",
+    "pk": 1,
+    "fields": {
+        "stripe_id": "1",
+        "created_at": "2017-10-27T03:34:47.612Z",
+        "amount": "9.99",
+        "currency": "usd",
+        "interval": "monthly",
+        "interval_count": 1,
+        "name": "Pro Plan",
+        "statement_descriptor": "",
+        "trial_period_days": null,
+        "metadata": null
+    }
+},
+{
+    "model": "pinax_stripe.plan",
+    "pk": 2,
+    "fields": {
+        "stripe_id": "2",
+        "created_at": "2017-10-27T03:35:08.330Z",
+        "amount": "2.99",
+        "currency": "usd",
+        "interval": "monthly",
+        "interval_count": 1,
+        "name": "Starter Plan",
+        "statement_descriptor": "",
+        "trial_period_days": null,
+        "metadata": null
+    }
+}
+]
