@@ -35,7 +35,7 @@ body.pinax-stripe {
         @extend .btn-outline-danger;
     }
     button.payment-method-delete {
-        @include button-variant($red, $red);
+        @include button-variant($danger, $danger);
     }
     table {
         .pinax-stripe-invoice-total,
@@ -44,7 +44,7 @@ body.pinax-stripe {
         }
         .pinax-stripe-invoice-paid {
             i {
-                color: $green;
+                color: $success;
                 @include icon(check);
             }
         }
@@ -72,23 +72,33 @@ body.pinax-stripe {
     }
 }
 
+.pinax-stripe-subscriptions-cancel-container {
+    form {
+        button {
+            @include button-variant($danger, $danger);
+        }
+    }
+    .summary {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+}
 
 .StripeElement {
     background-color: white;
     padding: 8px 12px;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    box-shadow: 0 1px 3px 0 #e6ebf1;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
+    border-radius: 0.25rem;
+    border: 1px solid $gray-400;
+    margin-bottom: 20px;
 }
 
 .StripeElement--focus {
-box-shadow: 0 1px 3px 0 #cfd7df;
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow;
 }
 
 .StripeElement--invalid {
-border-color: #fa755a;
+    border-color: $danger;
 }
 
 .StripeElement--webkit-autofill {
