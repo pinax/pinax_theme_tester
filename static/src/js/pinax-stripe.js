@@ -2,6 +2,9 @@
 
 const loadStripeElements = () => {
   const form = document.querySelector('form[data-stripe-key]');
+  if (form === null) {
+    return;
+  }
   const key = form.getAttribute('data-stripe-key');
   if (key) {
     if (Stripe === undefined) {
