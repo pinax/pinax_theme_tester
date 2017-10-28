@@ -11,5 +11,7 @@ pinax-messages
 pinax-invitations
 pinax-documents
 
+Pygments
+
 gunicorn
 whitenoise

@@ -20,7 +20,17 @@
     {% include "_menu.html" %}
 {% endblock %}
 
-{% block account_bar %}{% endblock %}
+{% block account_bar %}
+<ul class="navbar-nav navbar-dark">
+    <li class="navbar-text">
+        {{ view.config.template }}
+    </li>
+    {% if view.config %}
+        <li class="nav-item"><a class="nav-link" href="{{ view.config.resolved_path }}">Render</a></li>
+        <li class="nav-item"></li><a class="nav-link" href="{{ view.config.resolved_path }}?source=True">Source</a></li>
+    {% endif %}
+</ul>
+{% endblock %}
 
 {% block footer %}
     {% include "_footer.html" %}

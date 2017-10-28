@@ -17,7 +17,11 @@ class ViewConfig(object):
         self.context.update(dict(current_view=self))
 
     def make_view(self):
-        return as_view(self.template, **self.context)
+        # if source and self.template:
+        #     template = get_template(self.template)
+        #     source = highlight(template.template.source, DjangoLexer(), HtmlFormatter())
+        #     return as_view("source.html", config=self, template_source=source, template_name=self.template)
+        return as_view(self.template, config=self, **self.context)
 
     def url(self):
         return url(self.pattern, self.make_view(), name=self.name)

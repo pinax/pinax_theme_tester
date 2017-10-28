@@ -5,7 +5,7 @@ from .views import as_view
 
 
 urlpatterns = [
-    url(r"^$", as_view("homepage.html"), name="home")
+    url(r"^$", as_view("homepage.html", config=None), name="home")
 ]
 
 for label in CONFIG_MAP:

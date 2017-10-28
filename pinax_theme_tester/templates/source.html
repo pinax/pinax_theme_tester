@@ -1,0 +1,10 @@
+{% extends "site_base.html" %}
+
+{% block messages %}{% endblock %}
+
+{% block body %}
+<div class="source-container">
+    <h2>{{ template_name }}</h2>
+    {{ template_source|safe }}
+</div>
+{% endblock %}
