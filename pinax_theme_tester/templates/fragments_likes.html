@@ -8,12 +8,12 @@
 
     <h2><div class="variation">With an instance with a get_absolute_url</div><code>_like.html</code></h2>
     <div class="like-fragement-container">
-        {% include "pinax/likes/_like.html" %}
+        {% include "pinax/likes/_like.html" with instance=liked_object %}
     </div>
 
     <h2><div class="variation">Without an get_absolute_url</div><code>_like.html</code></h2>
     <div class="like-fragement-container">
-        {% include "pinax/likes/_like.html" with instance=liked_object %}
+        {% include "pinax/likes/_like.html" %}
     </div>
 
     <h2><div class="variation">Can Like / Not Liked</div><code>_widget_brief.html</code></h2>
