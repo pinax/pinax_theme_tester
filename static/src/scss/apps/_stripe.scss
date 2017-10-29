@@ -18,7 +18,7 @@ body.pinax-stripe {
     }
     &.pinax-stripe-subscriptions,
     &.pinax-stripe-payment-methods {
-        a i {
+        h4 a i {
             @include icon(plus);
         }
     }

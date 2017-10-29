@@ -36,7 +36,7 @@ const loadStripeElements = () => {
           const tokenInput = document.createElement('input');
           tokenInput.setAttribute('type', 'hidden');
           tokenInput.setAttribute('name', 'stripeToken');
-          tokenInput.setAttribute('value', result.token);
+          tokenInput.setAttribute('value', result.token.id);
           form.appendChild(tokenInput);
           form.submit();
         }
