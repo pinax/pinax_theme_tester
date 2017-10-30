@@ -9,6 +9,7 @@ pinax-stripe
 pinax-messages
 pinax-invitations
 pinax-documents
+pinax-notifications
 
 Pygments
 

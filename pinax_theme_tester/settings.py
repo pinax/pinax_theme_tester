@@ -136,6 +136,7 @@ INSTALLED_APPS = [
     "pinax.cohorts",
     "pinax.stripe",
     "pinax.messages",
+    "pinax.notifications",
     "pinax.invitations",
     "pinax.documents",
 
