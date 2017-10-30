@@ -10,7 +10,7 @@ main {
     margin-top: -20px;
   }
 }
-#content_body {
+#content-body {
   @include make-container();
   @include make-container-max-widths();
 }
