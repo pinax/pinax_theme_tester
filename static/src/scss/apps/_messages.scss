@@ -5,8 +5,6 @@ body.pinax-messages {
 .pinax-messages-inbox-container {
     h2 {
         a {
-            @extend .btn;
-            @extend .btn-sm;
             @include button-variant($primary, $primary);
             i {
                 @include icon(envelope);
@@ -68,8 +66,6 @@ body.pinax-messages {
 .pinax-messages-thread-detail-container {
     h2 {
         a {
-            @extend .btn;
-            @extend .btn-sm;
             @include button-outline-variant($danger);
         }
         border-bottom: 1px solid $gray-200;
