@@ -6,9 +6,6 @@ body.pinax-messages {
     h2 {
         a {
             @include button-variant($primary, $primary);
-            i {
-                @include icon(envelope);
-            }
         }
     }
     .no-messages {

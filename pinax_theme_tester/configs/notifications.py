@@ -47,7 +47,7 @@ patch = "http://pinaxproject.com/pinax-design/patches/pinax-notifications.svg"
 label = "notifications"
 title = "Pinax Notifications"
 url_namespace = "pinax_notifications"
-
+app_name = "pinax_notifications"
 
 class ViewConfig(BaseViewConfig):
 

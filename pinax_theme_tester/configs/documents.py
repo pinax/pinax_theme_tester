@@ -33,7 +33,7 @@ patch = "http://pinaxproject.com/pinax-design/patches/pinax-documents.svg"
 label = "documents"
 title = "Pinax Documents"
 url_namespace = "pinax_documents"
-
+app_name = "pinax_documents"
 
 class ViewConfig(BaseViewConfig):
     def resolved_path(self):

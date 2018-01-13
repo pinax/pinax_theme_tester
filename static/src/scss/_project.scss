@@ -107,9 +107,6 @@ aside {
         color: $gray-400;
         text-align: center;
         width: 2rem;
-        i {
-            @include icon(bars);
-        }
     }
     position: absolute;
     top: 0;
@@ -171,15 +168,6 @@ aside {
 }
 
 body.show-menu {
-    .btn-menu-toggle,
-    .btn-menu-toggle:hover,
-    .btn-menu-toggle:active,
-    .btn-menu-toggle:link,
-    .btn-menu-toggle:focus {
-        i {
-            @include icon(minus);
-        }
-    }
     aside {
         width: 300px;
         overflow-y: auto;

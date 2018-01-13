@@ -46,7 +46,7 @@ patch = "http://pinaxproject.com/pinax-design/patches/blank.svg"
 label = "cohort"
 title = "Pinax Cohorts"
 url_namespace = "pinax_cohorts"
-
+app_name = "pinax_cohorts"
 
 class ViewConfig(BaseViewConfig):
 

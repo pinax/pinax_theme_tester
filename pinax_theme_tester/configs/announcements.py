@@ -25,6 +25,7 @@ announcement_list = [
 label = "announcement"
 title = "Pinax Announcements"
 url_namespace = "pinax_announcements"
+app_name = "pinax_announcements"
 
 
 class ViewConfig(BaseViewConfig):
