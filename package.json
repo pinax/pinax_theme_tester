@@ -29,7 +29,7 @@
     "babel-core": "6.26.0",
     "babel-preset-env": "1.6.1",
     "babelify": "8.0.0",
-    "bootstrap": "4.0.0-beta.3",
+    "bootstrap": "4.0.0",
     "browser-sync": "2.23.5",
     "browserify": "15.1.0",
     "chai": "4.1.2",
@@ -46,7 +46,7 @@
     "mocha": "4.1.0",
     "node-sass": "4.7.2",
     "onchange": "3.3.0",
-    "uglify-js": "3.3.5",
+    "uglify-js": "3.3.7",
     "watchify": "3.9.0"
   }
 }

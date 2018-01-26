@@ -36,7 +36,7 @@ context = dict(
     form=InviteForm(user=None)
 )
 
-patch = "http://pinaxproject.com/pinax-design/patches/blank.svg"
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-invitations.svg"
 label = "invitations"
 title = "Pinax Invitations"
 

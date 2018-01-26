@@ -15,13 +15,13 @@ from . import (
 CONFIG_MAP = {
     dua.label: dua,
     general.label: general,
-    blog.label: blog,
     announcements.label: announcements,
+    blog.label: blog,
     cohorts.label: cohorts,
-    stripe.label: stripe,
-    messages.label: messages,
-    likes.label: likes,
-    invitations.label: invitations,
     documents.label: documents,
-    notifications.label: notifications
+    invitations.label: invitations,
+    likes.label: likes,
+    messages.label: messages,
+    notifications.label: notifications,
+    stripe.label: stripe,
 }

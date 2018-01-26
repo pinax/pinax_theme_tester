@@ -1,15 +1,17 @@
 Django==2.0.1
-pinax-templates==1.0.0
+pinax-templates
 
 django-user-accounts
-pinax-blog
 pinax-announcements
+pinax-blog
+pinax-calendars
 pinax-cohorts
-pinax-stripe
-pinax-messages
-pinax-invitations
 pinax-documents
+pinax-invitations
+pinax-messages
 pinax-notifications
+pinax-stripe
+pinax-testimonials
 
 Pygments
 
