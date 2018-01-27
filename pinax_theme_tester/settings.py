@@ -132,6 +132,7 @@ INSTALLED_APPS = [
     "account",
     "pinax.announcements",
     "pinax.blog",
+    "pinax.calendars",
     "pinax.cohorts",
     "pinax.documents",
     "pinax.images",
