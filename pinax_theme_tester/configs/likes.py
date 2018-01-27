@@ -33,4 +33,4 @@ urlpatterns = [
     view.url()
     for view in views
 ]
-url = url("likes", include("pinax_theme_tester.configs.likes"))
+url = url("likes/", include("pinax_theme_tester.configs.likes"))

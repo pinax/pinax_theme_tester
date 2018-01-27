@@ -1,0 +1,19 @@
+{% extends "site_base.html" %}
+
+{% block messages %}{% endblock %}
+
+{% block body %}
+<section class="fragment-container">
+    <h1>Pinax Waitinglist Fragments</h1>
+
+    <h2><div class="variation">Signup Form</div><code>_list_signup.html</code></h2>
+    <div class="waitinglist-fragment-container">
+        {% include "pinax/waitinglist/_list_signup.html" %}
+    </div>
+
+    <h2><div class="variation">Successful Signup</div><code>_success.html</code></h2>
+    <div class="waitinglist-fragment-container">
+        {% include "pinax/waitinglist/_success.html" %}
+    </div>
+</section>
+{% endblock %}

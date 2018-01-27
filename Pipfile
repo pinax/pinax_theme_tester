@@ -1,0 +1,30 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+Django = "==2.0.1"
+pinax-templates = "*"
+django-user-accounts = "*"
+pinax-announcements = "*"
+pinax-blog = "*"
+pinax-calendars = "*"
+pinax-cohorts = "*"
+pinax-documents = "*"
+pinax-invitations = "*"
+pinax-messages = "*"
+pinax-notifications = "*"
+pinax-stripe = "*"
+pinax-testimonials = "*"
+pinax-waitinglist = "*"
+Pygments = "*"
+gunicorn = "*"
+whitenoise = "*"
+
+
+[dev-packages]
+
