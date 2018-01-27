@@ -1,9 +1,9 @@
-from django.conf.urls import url, include
-
-from .base import ViewConfig
-
+from django.conf.urls import include, url
+from django.urls import reverse
 from pinax.invitations.forms import InviteForm
 from pinax.invitations.models import JoinInvitation
+
+from .base import ViewConfig
 
 
 class User:
@@ -39,13 +39,20 @@ context = dict(
 patch = "http://pinaxproject.com/pinax-design/patches/pinax-invitations.svg"
 label = "invitations"
 title = "Pinax Invitations"
+url_namespace = app_name = "pinax_invitations"
+
+class NamespacedViewConfig(ViewConfig):
+
+    def resolved_path(self):
+        return reverse("{}:{}".format(url_namespace, self.name), kwargs=self.pattern_kwargs)
 
 views = [
-    ViewConfig(pattern=r"^fragments/$", template="fragments_invitations.html", name="invitations_fragments", pattern_kwargs={}, **context),
-    ViewConfig(pattern=r"", template="", name="pinax-invitations-invite", pattern_kwargs={}, menu=False)
+    NamespacedViewConfig(pattern=r"^fragments/$", template="fragments_invitations.html", name="invitations_fragments", pattern_kwargs={}, **context),
+    # Fake urls to handle template {% url %} needs
+    NamespacedViewConfig(pattern=r"", template="", name="invite", pattern_kwargs={}, menu=False)
 ]
 urlpatterns = [
     view.url()
     for view in views
 ]
-url = url("invitations", include("pinax_theme_tester.configs.invitations"))
+url = url("invitations/", include("pinax_theme_tester.configs.invitations"))

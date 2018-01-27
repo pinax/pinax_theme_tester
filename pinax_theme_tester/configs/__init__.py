@@ -1,15 +1,16 @@
 from . import (
     dua,
     general,
-    blog,
     announcements,
+    blog,
     cohorts,
-    stripe,
-    messages,
-    likes,
-    invitations,
     documents,
-    notifications
+    invitations,
+    likes,
+    messages,
+    notifications,
+    stripe,
+    waitinglist,
 )
 
 CONFIG_MAP = {
@@ -24,4 +25,5 @@ CONFIG_MAP = {
     messages.label: messages,
     notifications.label: notifications,
     stripe.label: stripe,
+    waitinglist.label: waitinglist,
 }

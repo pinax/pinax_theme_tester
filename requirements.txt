@@ -1,4 +1,5 @@
 Django==2.0.1
+
 pinax-templates
 
 django-user-accounts
@@ -12,6 +13,7 @@ pinax-messages
 pinax-notifications
 pinax-stripe
 pinax-testimonials
+pinax-waitinglist
 
 Pygments
 

@@ -130,15 +130,16 @@ INSTALLED_APPS = [
 
     #
     "account",
-    "pinax.blog",
-    "pinax.images",
     "pinax.announcements",
+    "pinax.blog",
     "pinax.cohorts",
-    "pinax.stripe",
+    "pinax.documents",
+    "pinax.images",
+    "pinax.invitations",
     "pinax.messages",
     "pinax.notifications",
-    "pinax.invitations",
-    "pinax.documents",
+    "pinax.stripe",
+    "pinax.waitinglist",
 
     # project
     "pinax_theme_tester",
