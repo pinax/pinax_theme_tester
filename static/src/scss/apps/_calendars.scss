@@ -1,0 +1,21 @@
+.calendar-heading {
+    .calendar-nav {
+        .calendar-date {
+            display: none;
+        }
+        a {
+            @include button-variant($primary, $primary);
+        }
+        margin-bottom: 10px;
+    }
+    h3 {
+        text-align: center;
+    }
+}
+.calendar-table {
+    @extend table;
+    td {
+        width: 14.2vw;
+        height: 14.2vmin;
+    }
+}

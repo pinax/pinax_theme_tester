@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fbd5b20e6da78b0e08afa721cd15f82a346f5931e0d4e7cf235d5ae7ff150bf2"
+            "sha256": "e9e478e7c0e996a58735139b23a8ea8c0fb781d0b30f1c7896514f09ea892c00"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -176,10 +176,10 @@
         },
         "pinax-calendars": {
             "hashes": [
-                "sha256:6ad673d3d26e14d12f9c422327faedf8f3f4984659b74ccf2b84be0eabfe5b5e",
-                "sha256:edb8ce428ce461ccd97a21dfd9462846dbf7c3ac3cfd33f701e56171744642f4"
+                "sha256:d7d14fc9518a6a4b5d4de12bea5033a5bacfe3e786f02d52f08107f6b54a9a25",
+                "sha256:963b5763c26381a37f204b1cb8eb3354bd13f4b18fa2793020c53e335f309437"
             ],
-            "version": "==2.0.3"
+            "version": "==2.0.4"
         },
         "pinax-cohorts": {
             "hashes": [
@@ -232,10 +232,10 @@
         },
         "pinax-templates": {
             "hashes": [
-                "sha256:59e5c061086d076544d55c6b74ee2ae573c3414d9f4799f782a703d68d0da545",
-                "sha256:604847d3403e57da10303f9dcf75e837de34fa990f4a5922ac1416dccb7eae11"
+                "sha256:b22cb671557897c06589356c360eae6222da1b2d53eabfb621d1acd15cacf7be",
+                "sha256:5641c6d021a055b325841adfd4100f3dc0efaa5e2a286df7b07e2c27e9659762"
             ],
-            "version": "==1.0.3"
+            "version": "==1.0.4"
         },
         "pinax-testimonials": {
             "hashes": [

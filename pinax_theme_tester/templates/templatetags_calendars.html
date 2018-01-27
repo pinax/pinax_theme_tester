@@ -1,0 +1,17 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load pinax_calendars_tags %}
+
+{% block messages %}{% endblock %}
+
+{% block body %}
+<section class="fragment-container">
+    <h1>Pinax Calendars Template Tags</h1>
+
+    <h2><div class="variation">Calendar</div><code>calendar.html</code></h2>
+    <div class="calendars-fragment-container">
+        {% calendar events the_date %}
+    </div>
+</section>
+{% endblock %}
