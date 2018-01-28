@@ -41,7 +41,13 @@ label = "calendars"
 title = "Pinax Calendars"
 
 views = [
-    ViewConfig(pattern=r"^templatetags/$", template="templatetags_calendars.html", name="calendars_templatetags", pattern_kwargs={}, **context),
+    ViewConfig(
+        pattern=r"^templatetags/$",
+        template="templatetags_calendars.html",
+        template_source="pinax/calendars/calendar.html",
+        name="calendars_templatetags",
+        pattern_kwargs={},
+        **context),
     # Fake urls to handle adapter reverse() calls
     ViewConfig(pattern="(?P<year>\d+)/(?P<month>\d+)/", template="", name="monthly", pattern_kwargs={}, menu=False),
     ViewConfig(pattern="(?P<year>\d+)/(?P<month>\d+)/(?P<day>\d+)/", template="", name="daily", pattern_kwargs={}, menu=False),
