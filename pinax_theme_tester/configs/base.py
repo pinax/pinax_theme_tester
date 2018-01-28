@@ -6,7 +6,7 @@ from pinax_theme_tester.views import as_view
 
 class ViewConfig(object):
 
-    def __init__(self, name, pattern, template, pattern_kwargs, menu=True, display_name=None, **kwargs):
+    def __init__(self, name, pattern, template, pattern_kwargs, menu=True, display_name=None, template_source=None, **kwargs):
         self.name = name
         self.pattern = pattern
         self.template = template
@@ -14,6 +14,7 @@ class ViewConfig(object):
         self.pattern_kwargs = pattern_kwargs
         self.menu = menu
         self._display_name = display_name
+        self.template_source = template_source  # explicit path to template source, or a list of template source paths
         self.context.update(dict(current_view=self))
 
     def make_view(self):

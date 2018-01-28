@@ -27,7 +27,17 @@ label = "likes"
 title = "Pinax Likes"
 
 views = [
-    ViewConfig(pattern=r"^fragments/$", template="fragments_likes.html", name="likes_fragments", pattern_kwargs={}, **context),
+    ViewConfig(
+        pattern=r"^fragments/$",
+        template="fragments_likes.html",
+        template_source=[
+            "pinax/likes/_like.html",
+            "pinax/likes/_widget_brief.html",
+            "pinax/likes/_widget.html",
+        ],
+        name="likes_fragments",
+        pattern_kwargs={},
+        **context),
 ]
 urlpatterns = [
     view.url()

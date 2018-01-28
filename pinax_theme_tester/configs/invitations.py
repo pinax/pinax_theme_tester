@@ -47,7 +47,18 @@ class NamespacedViewConfig(ViewConfig):
         return reverse("{}:{}".format(url_namespace, self.name), kwargs=self.pattern_kwargs)
 
 views = [
-    NamespacedViewConfig(pattern=r"^fragments/$", template="fragments_invitations.html", name="invitations_fragments", pattern_kwargs={}, **context),
+    NamespacedViewConfig(
+        pattern=r"^fragments/$",
+        template="fragments_invitations.html",
+        template_source=[
+            "pinax/invitations/_invite_form.html",
+            "pinax/invitations/_invited.html",
+            "pinax/invitations/_invites_remaining.html",
+        ],
+        name="invitations_fragments",
+        pattern_kwargs={},
+        **context),
+
     # Fake urls to handle template {% url %} needs
     NamespacedViewConfig(pattern=r"", template="", name="invite", pattern_kwargs={}, menu=False)
 ]

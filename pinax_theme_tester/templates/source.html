@@ -3,8 +3,16 @@
 {% block messages %}{% endblock %}
 
 {% block body %}
+    {% if usage_source %}
 <div class="source-container">
-    <h2>{{ template_name }}</h2>
-    {{ template_source|safe }}
+    <h2>Usage</h2>
+    {{ usage_source|safe }}
 </div>
+    {% endif %}
+    {% for template in templates %}
+<div class="source-container">
+    <h2>{{ template.name }}</h2>
+    {{ template.source|safe }}
+</div>
+    {% endfor %}
 {% endblock %}
