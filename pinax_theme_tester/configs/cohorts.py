@@ -42,7 +42,7 @@ waiting_list = [
 ]
 
 
-patch = "http://pinaxproject.com/pinax-design/patches/blank.svg"
+patch = "http://pinaxproject.com/pinax-design/patches/pinax-cohorts.svg"
 label = "cohort"
 title = "Pinax Cohorts"
 url_namespace = "pinax_cohorts"
