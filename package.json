@@ -44,7 +44,7 @@
     "jsdom": "11.5.1",
     "jsdom-global": "3.0.2",
     "mocha": "4.1.0",
-    "node-sass": "4.7.2",
+    "node-sass": "^4.10.0",
     "onchange": "3.3.0",
     "uglify-js": "3.3.7",
     "watchify": "3.9.0"

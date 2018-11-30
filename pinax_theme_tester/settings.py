@@ -16,8 +16,8 @@ DATABASES = {
 
 ALLOWED_HOSTS = [
     "localhost",
+    "pinax-templates.herokuapp.com",
     "templates.pinaxproject.com",
-    os.environ.get("GONDOR_INSTANCE_DOMAIN")
 ]
 
 # Local time zone for this installation. Choices can be found here:
