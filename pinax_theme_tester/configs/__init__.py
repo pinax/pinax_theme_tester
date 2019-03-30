@@ -12,6 +12,7 @@ from . import (
     notifications,
     stripe,
     waitinglist,
+    webanalytics,
 )
 
 CONFIG_MAP = {
@@ -28,4 +29,5 @@ CONFIG_MAP = {
     notifications.label: notifications,
     stripe.label: stripe,
     waitinglist.label: waitinglist,
+    webanalytics.label: webanalytics,
 }

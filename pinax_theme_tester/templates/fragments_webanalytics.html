@@ -1,0 +1,29 @@
+{% extends "site_base.html" %}
+
+{% block messages %}{% endblock %}
+
+{% block body %}
+<section class="fragment-container">
+    <h1>Pinax Webanalytics Fragments</h1>
+
+    <h2><div class="variation">Signup Form</div><code>_adwords_conversion.html</code></h2>
+    <div class="webanalytics-fragment-container">
+        {% include "pinax/webanalytics/_adwords_conversion.html" %}
+    </div>
+
+    <h2><div class="variation">Successful Signup</div><code>_gauges.html</code></h2>
+    <div class="webanalytics-fragment-container">
+        {% include "pinax/webanalytics/_gauges.html" %}
+    </div>
+
+    <h2><div class="variation">Signup Form</div><code>_google.html</code></h2>
+    <div class="webanalytics-fragment-container">
+        {% include "pinax/webanalytics/_google.html" %}
+    </div>
+
+    <h2><div class="variation">Successful Signup</div><code>_mixpanel.html</code></h2>
+    <div class="webanalytics-fragment-container">
+        {% include "pinax/webanalytics/_mixpanel.html" %}
+    </div>
+</section>
+{% endblock %}

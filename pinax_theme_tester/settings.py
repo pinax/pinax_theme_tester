@@ -141,6 +141,7 @@ INSTALLED_APPS = [
     "pinax.notifications",
     "pinax.stripe",
     "pinax.waitinglist",
+    "pinax.webanalytics",
 
     # project
     "pinax_theme_tester",
