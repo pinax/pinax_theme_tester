@@ -7,7 +7,7 @@ name = "pypi"
 
 [packages]
 
-django = "==2.0.1"
+django = "==2.2.10"
 pinax-templates = "==1.0.4"
 django-user-accounts = "*"
 pinax-announcements = "*"
